@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- J'instancie une seule fois ces classes -->
+    <!-- L'id va permettre de gérer les dépendances entre les classes -->
+    <!-- name dans property correspond à l'attribut dans la classe JAVA -->
+    <bean id="service" class="com.mycompany.invoice.service.InvoiceServiceWithPrefix">
+        <property name="repository" ref="repository"/>
+        <property name="lastId" value="125"/>
+        <property name="prefix" value="INV_"/>
+    </bean>
+    <bean id="controller" class="com.mycompany.invoice.controller.InvoiceControllerWeb">
+        <property name="service" ref="service" />
+    </bean>
+    <bean id="repository" class="com.mycompany.invoice.repository.InvoiceRepositoryMemory"/>
+
+    
+
+</beans>
