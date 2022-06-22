@@ -6,12 +6,12 @@
     default-autowire="byType">
 
 
-    <bean class="com.mycompany.invoice.service.InvoiceServiceWithPrefix">
+    <bean class="com.mycompany.invoice.service.prefix.InvoiceServiceWithPrefix">
         <property name="lastId" value="125"/>
         <property name="prefix" value="INV_"/>
     </bean>
-    <bean class="com.mycompany.invoice.controller.InvoiceControllerWeb" />
-    <bean class="com.mycompany.invoice.repository.InvoiceRepositoryMemory"/>
+    <bean class="com.mycompany.invoice.controller.web.InvoiceControllerWeb" />
+    <bean class="com.mycompany.invoice.repository.memory.InvoiceRepositoryMemory"/>
 
     
 

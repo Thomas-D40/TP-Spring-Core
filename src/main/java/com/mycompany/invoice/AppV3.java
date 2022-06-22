@@ -13,7 +13,7 @@ public class AppV3 {
 	
 		public static void main( String[] args )
 		{
-			ApplicationContext context = new ClassPathXmlApplicationContext("applicationContextV4.xml");
+			ApplicationContext context = new ClassPathXmlApplicationContext("applicationContextV5.xml");
 			
 			
 			

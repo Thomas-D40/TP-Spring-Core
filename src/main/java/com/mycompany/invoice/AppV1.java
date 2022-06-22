@@ -1,10 +1,10 @@
 package com.mycompany.invoice;
 
-import com.mycompany.invoice.controller.InvoiceControllerWithKeyboard;
-import com.mycompany.invoice.controller.InvoiceControllerWeb;
-import com.mycompany.invoice.repository.InvoiceRepositoryMemory;
-import com.mycompany.invoice.service.InvoiceServiceWithOnlyDigit;
-import com.mycompany.invoice.service.InvoiceServiceWithPrefix;
+import com.mycompany.invoice.controller.keyboard.InvoiceControllerWithKeyboard;
+import com.mycompany.invoice.controller.web.InvoiceControllerWeb;
+import com.mycompany.invoice.repository.memory.InvoiceRepositoryMemory;
+import com.mycompany.invoice.service.digit.InvoiceServiceWithOnlyDigit;
+import com.mycompany.invoice.service.prefix.InvoiceServiceWithPrefix;
 
 import java.util.Scanner;
 

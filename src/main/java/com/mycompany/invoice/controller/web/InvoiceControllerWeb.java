@@ -1,26 +1,28 @@
-package com.mycompany.invoice.controller;
+package com.mycompany.invoice.controller.web;
 
+import com.mycompany.invoice.controller.InvoiceControllerInterface;
 import com.mycompany.invoice.entity.Invoice;
 import com.mycompany.invoice.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Controller;
 
-import java.util.Scanner;
-
-public class InvoiceControllerWithKeyboard implements InvoiceControllerInterface{
+@Controller
+@Primary
+public class InvoiceControllerWeb implements InvoiceControllerInterface {
+	
 	@Autowired
 	InvoiceServiceInterface service;
 	
 	public void createInvoice() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Customer name:");
-		String customerName = input.nextLine();
+		String customerName = "Mike";
 		
-		// Générer la facture
 		Invoice newInvoice = new Invoice();
 		newInvoice.setCustomerInvoice(customerName);
 		
 		
 		service.createInvoice(newInvoice);
+		
 	}
 	
 	public InvoiceServiceInterface getService() {

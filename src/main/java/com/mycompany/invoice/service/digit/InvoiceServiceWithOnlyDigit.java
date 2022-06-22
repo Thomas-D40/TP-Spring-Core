@@ -1,10 +1,13 @@
-package com.mycompany.invoice.service;
+package com.mycompany.invoice.service.digit;
 
 import com.mycompany.invoice.entity.Invoice;
 import com.mycompany.invoice.repository.InvoiceRepositoryInterface;
+import com.mycompany.invoice.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class InvoiceServiceWithOnlyDigit implements InvoiceServiceInterface{
+@Service
+public class InvoiceServiceWithOnlyDigit implements InvoiceServiceInterface {
 	
 	@Autowired
 	private InvoiceRepositoryInterface repository;
