@@ -4,10 +4,9 @@ package com.mycompany.invoice;
 import com.mycompany.invoice.controller.InvoiceControllerInterface;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-public class AppV4 {
+public class AppV4_SpringSansXML {
 	
 	
 		public static void main( String[] args )
